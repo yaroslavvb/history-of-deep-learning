@@ -546,6 +546,10 @@ ex: Adam is blackbox, Muon is not blackbox
 
 ### Sutro Group
 
+[Sutro Group: top level](https://docs.google.com/document/d/1B9867EN6Bg4ZVQK9vI_ZqykZ5HEtMAHJ7zBGGas4szQ/edit?tab=t.0#heading=h.j6rssh3enbtd)  
+[https://t.me/sutro\_group](https://t.me/sutro_group)  
+open-source+1 (Unlicense)
+
 agentic research:  
 [SutroYaro](https://github.com/cybertronai/SutroYaro)  
 [SutroAna](https://github.com/cybertronai/SutroAna)
