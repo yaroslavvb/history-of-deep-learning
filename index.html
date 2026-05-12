@@ -21,34 +21,49 @@
     .reveal .slide-number { font-size: 14px; }
     .reveal .slides section { text-align: left; }
 
-    /* Image sizing — shrink images so the whole slide fits without scrolling.
-       Each slide is sized 1200×760 (see Reveal.initialize) with 5% margin,
-       leaving ~684px vertical. We set a per-image cap based on how many
-       images live on the same slide; the `data-image-count` attribute is
-       set by the JS at the bottom of the page once Reveal has rendered
-       all slides. */
+    /* Image sizing — sized in PIXELS relative to the slide's coordinate
+       space (1200×760, see Reveal.initialize), which Reveal scales as a
+       single unit to fit the viewport. Avoid `vh` here because that's
+       relative to the BROWSER viewport, not the scaled slide.
+       The `data-image-count` attribute is set by the JS at the bottom of
+       the page (capped at 7 — slides with more images stack at the
+       smallest size and may overflow). */
     .reveal .slides section img {
-      max-width: 100%;
-      max-height: 60vh;       /* fallback if data-image-count unset */
+      max-width: 95%;
+      max-height: 580px;      /* fallback if data-image-count unset */
       width: auto;
       height: auto;
       object-fit: contain;
       box-shadow: 0 2px 14px rgba(0,0,0,0.12);
       border-radius: 4px;
-      margin: 0 auto;
+      margin: 4px auto;
       display: block;
     }
-    .reveal section[data-image-count="2"] img { max-height: 34vh; }
-    .reveal section[data-image-count="3"] img { max-height: 24vh; }
-    .reveal section[data-image-count="4"] img { max-height: 19vh; }
-    .reveal section[data-image-count="5"] img { max-height: 16vh; }
-    .reveal section[data-image-count="6"] img { max-height: 14vh; }
-    .reveal section[data-image-count="7"] img,
-    .reveal section[data-image-count="8"] img,
-    .reveal section[data-image-count="9"] img,
-    .reveal section[data-image-count^="1"] img { max-height: 12vh; }
-    /* Slides that consist almost entirely of images get tighter spacing
-       so they pack vertically without overflow. */
+    .reveal section[data-image-count="1"] img { max-height: 580px; }
+    .reveal section[data-image-count="2"] img { max-height: 480px; }
+    .reveal section[data-image-count="3"] img { max-height: 380px; }
+    .reveal section[data-image-count="4"] img { max-height: 280px; }
+    .reveal section[data-image-count="5"] img { max-height: 200px; }
+    .reveal section[data-image-count="6"] img { max-height: 160px; }
+    .reveal section[data-image-count="7"] img { max-height: 130px; }
+
+    /* When there are 2 or 3 images on a slide, lay them side-by-side so
+       neither has to shrink as much vertically. (Markdown wraps each image
+       in its own <p>; we flex those wrappers.) */
+    .reveal section[data-image-count="2"] p:has(> img),
+    .reveal section[data-image-count="3"] p:has(> img) {
+      display: inline-block;
+      vertical-align: top;
+      margin: 4px 0.5%;
+    }
+    .reveal section[data-image-count="2"] p:has(> img) { width: 48%; }
+    .reveal section[data-image-count="3"] p:has(> img) { width: 31%; }
+    .reveal section[data-image-count="2"] p:has(> img) img,
+    .reveal section[data-image-count="3"] p:has(> img) img {
+      max-width: 100%;
+    }
+
+    /* Multi-image slides: tighter paragraph spacing so things pack. */
     .reveal section[data-image-count]:not([data-image-count="1"]) p {
       margin: 0.2em 0;
     }
@@ -88,7 +103,7 @@
     function tagImageCounts() {
       document.querySelectorAll('.reveal .slides section').forEach(s => {
         const n = s.querySelectorAll('img').length;
-        if (n > 0) s.setAttribute('data-image-count', n);
+        if (n > 0) s.setAttribute('data-image-count', String(Math.min(n, 7)));
       });
     }
     Reveal.on('ready', tagImageCounts);
