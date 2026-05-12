@@ -177,6 +177,13 @@ Old embryonic morphogenesis program
 New anatomic dimensions  
 Embryonic morphogenesis program **now obsolete** (but hard to change)
 
+## Python Global Interpreter Lock
+
+![](images/image23.png)  
+1992 GIL  
+2005 multi-core machines  
+2030 no-GIL by default (if we are lucky)
+
 # Path dependencies in Deep Learning
 
 What is path dependency? 
@@ -200,19 +207,19 @@ What is path dependency?
 
 #### The Memory wall
 
-![](images/image23.png)![](images/image24.png)  
+![](images/image24.png)![](images/image25.png)  
 Arithmetic is now essentially free
 
-![](images/image25.png)  
+![](images/image26.png)  
 \<slide\>
 
 #### The end of Dennard scaling
 
-![](images/image26.png)
+![](images/image27.png)
 
 Compilers are trying to make things work, yet abstractions leak. Some algorithms are impossible to parallelize (hence minibatching)
 
-![](images/image27.png)  
+![](images/image28.png)  
 \<slide\>
 
 #### Unreliable components
@@ -220,7 +227,7 @@ Compilers are trying to make things work, yet abstractions leak. Some algorithms
 [https://arxiv.org/pdf/2407.21783](https://arxiv.org/pdf/2407.21783)
 
 The Llama 3 Herd of Models  
-![](images/image28.png)
+![](images/image29.png)
 
 ### Applications drift
 
@@ -229,12 +236,12 @@ Original Deep learning didn't have an application, so the aims were broad.
 #### Rosenblatt, (eventual) space exploration
 
 1958, The New York Times  
-![](images/image29.png)  
+![](images/image30.png)  
 \<slide\>
 
 #### Andrew Ng, helicopter control
 
-![](images/image30.png)
+![](images/image31.png)
 
 Lack of deep learning "product market fit" means we focused on components reusable across domains  
 \- blackbox optimizers  
@@ -248,9 +255,10 @@ What design decisions were made in the old environment?
 ### Gradient descent
 
 Black box optimizers (designed for shifting demands)  
-Hit a dead-end.
+Hit a dead-end.  
+Descending a crowded [valley](https://arxiv.org/pdf/2007.01547)
 
-# ![](images/image31.png)
+# ![](images/image32.png)
 
 \<slide\>
 
@@ -258,7 +266,7 @@ Hit a dead-end.
 
 Targetting low compute/commute ratio
 
-![](images/image32.png)  
+![](images/image33.png)  
 \<slide\>
 
 ### Synchronous training
@@ -287,11 +295,11 @@ Expensive things.
 \- Hence “kill zone”:  
 technology that is promising but not bankable.
 
-![](images/image33.png)
+![](images/image34.png)
 
 ## 2018 Cade Metz article
 
-![](images/image34.png)
+![](images/image35.png)
 
 45 AI hardware startups.
 
@@ -304,14 +312,12 @@ technology that is promising but not bankable.
 This year: Learning algorithm development.
 
 Implement 55 Hinton papers: 1.2B tokens ([visual\_tour](https://github.com/cybertronai/hinton-problems/))  
-![](images/image35.png)
+![](images/image36.png)
 
 \<slide\>  
 Implement 58 Schmidhuber papers: 1.5B tokens [visual\_tour](https://github.com/cybertronai/schmidhuber-problems/blob/main/VISUAL_TOUR.md)
 
-![](images/image36.png)
-
-Kernel Sage, TenX Semi, Verkor, ChipStack, Architect Labs, Ricursive Intelligence, Tattvam
+![](images/image37.png)
 
 # The future
 
@@ -334,13 +340,13 @@ Less splits \= more freedom to improve things\!
 #### Mega-kernels
 
 framework/kernel wall split  
-![](images/image37.png)
+![](images/image38.png)
 
 ### Hardware-specific algorithms
 
 math/compiler wall split
 
-![](images/image38.png)
+![](images/image39.png)
 
 Old world \= slow feedback.
 
@@ -349,19 +355,19 @@ Mini-batching motivated by the memory wall.
 
 2003 \- "The general inefficiency of batch training for gradient descent learning"
 
-![](images/image39.png)  
+![](images/image40.png)  
 \<slide\>
 
 2006 \-- "A Fast Learning Algorithm for Deep Belief Nets" [https://www.cs.toronto.edu/\~fritz/absps/ncfast.pdf](https://www.cs.toronto.edu/~fritz/absps/ncfast.pdf)  
-![](images/image40.png)  
+![](images/image41.png)  
 \<slide\>  
 Explosion of DSLs this year
 
-![](images/image41.png)
+![](images/image42.png)
 
 ### Novel learning algorithms
 
-![](images/image42.png)
+![](images/image43.png)
 
 Backprop compute-to-commute ratio suits for pre-memory-wall era.  
 What is natural for the post-memory-wall era?
@@ -373,6 +379,44 @@ Scientific computing literature customizes equation solvers to the structure of 
 \- fast multipole  
 \- etc.
 
-Deep Learning uses the same optimizer for convolutional networks as for Transformers.
+Deep Learning uses the same optimizer for convolutional networks as for Transformers.  
+\- going from blackbox to architecture specialized  
+ex: Adam is blackbox, Muon is not blackbox
 
-## Plan
+## Approach
+
+\- Repeat old approach  
+\- But faster
+
+(we spent 70 years trying semi-random things on toy prolems)
+
+### Path to attention
+
+\- Deep Sets (Zaheer et al. 2017\)  
+\- Deep Sets with Attention aka Multi-Instance Learning (Ilse, Tomczak, Welling, ’18)  
+\- Bag of words (Salton & McGill, 1986\) Word2Vec (Mikolov et al., 2013\)  
+\- Attention weighting for documents (Wang et al, ’16)  
+\- Hierarchical attention weighting (Yang et al. ’17)  
+\- Question Answering with Pooling and Iteration (Sukhbaatar et al., ’15)  
+\- Seq2Seq with attention (Bahdanau, Cho, Bengio ’14) (Pham, Luong, Manning ’15)  
+\- Pointer networks for finding convex hull (Vinyals et al., ‘15)  
+\- Transformer with multi-head attention (Vaswani et al., ‘17)
+
+(from Alex Smola attention [talk](https://alex.smola.org/talks/ICML19-attention.pdf))
+
+### Sutro Group
+
+agentic research:  
+[SutroYaro](https://github.com/cybertronai/SutroYaro)  
+[SutroAna](https://github.com/cybertronai/SutroAna)
+
+hill-climbing:  
+theory track (can we make learning memory friendly?):  
+[matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
+[sparse-parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
+applied track (measure actual Joules)  
+[wikitext](https://github.com/cybertronai/wikitext)
+
+# BarCode
+
+## ![](images/image44.png)
