@@ -85,9 +85,9 @@ With a bright mobile engineer from fast.ai, Andrew Shaw
 ![](images/image9.png)
 
 ![](images/image10.png)  
-[https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/](https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/)  
-[https://github.com/cybertronai/imagenet18](https://github.com/cybertronai/imagenet18)  
-[https://dawn.cs.stanford.edu/dawnbench](https://dawn.cs.stanford.edu/dawnbench)
+\- [https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/](https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/)  
+\- [https://github.com/cybertronai/imagenet18](https://github.com/cybertronai/imagenet18)  
+\- [https://dawn.cs.stanford.edu/dawnbench](https://dawn.cs.stanford.edu/dawnbench)
 
 Cited as an "unnamed collaborator working for US military"
 
@@ -100,7 +100,6 @@ Cited as an "unnamed collaborator working for US military"
 
 ### Transformer-XL with Benn Mann
 
-Running training experiment with Ben Mann  
 ![](images/image11.png)  
 [https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d](https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d)
 
@@ -169,18 +168,13 @@ Sutro group: solve AI using AI
 
 What is path dependency? 
 
-1\. make a good design decision  
+1\. make a **good** design decision  
 2\. the environment changes  
-3\. decision is now bad
+3\. decision is now **bad**
 
 ![](images/image18.png)
 
 ![](images/image19.png)
-
-
----
-
-## Horses
 
 ![](images/image20.png)
 
@@ -202,7 +196,9 @@ What is path dependency?
 
 ![](images/image22.png)
 
-Old embryonic morphogenesis program, new anatomic dimensions, program hard to change.
+Old embryonic morphogenesis program  
+New anatomic dimensions  
+Embryonic morphogenesis program **now obsolete** (but to change)
 
 
 ---
@@ -231,21 +227,26 @@ What is path dependency?
 
 ### Hardware drift
 
-1\. memory wall  
-![](images/image23.png)![](images/image24.png)
+#### The Memory wall
 
-2\. The end of Dennard scaling  
+![](images/image23.png)![](images/image24.png)  
+Arithmetic is now essentially free
+
 ![](images/image25.png)
+
+#### The end of Dennard scaling
+
+![](images/image26.png)
 
 Compilers are trying to make things work, yet abstractions leak. Some algorithms are impossible to parallelize (hence minibatching)
 
-![](images/image26.png)
+![](images/image27.png)
 
 3\. Too many components to be reliable  
 [https://arxiv.org/pdf/2407.21783](https://arxiv.org/pdf/2407.21783)
 
 The Llama 3 Herd of Models  
-![](images/image27.png)
+![](images/image28.png)
 
 ### Applications drift
 
@@ -254,12 +255,12 @@ Original Deep learning didn't have an application, so the aims were broad.
 #### Rosenblatt, (eventual) space exploration
 
 1958, The New York Times  
-![](images/image28.png)
+![](images/image29.png)
 
 #### Andrew Ng, helicopter control
 
 https://cs.stanford.edu/groups/helicopter/papers/iser04-invertedflight.pdf  
-![](images/image29.png)
+![](images/image30.png)
 
 Lack of deep learning "product market fit" means we focused on components reusable across domains  
 	\- blackbox optimizer  
@@ -278,14 +279,14 @@ Lack of deep learning "product market fit" means we focused on components reusab
 
 ---
 
-# ![](images/image30.png)
+# ![](images/image31.png)
 
 ### Backprop
 
 	Targetting low compute/commute ratio  
 	[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
-![](images/image31.png)
+![](images/image32.png)
 
 ### Synchronous training
 
@@ -313,11 +314,11 @@ Expensive things.
 
 Large ambition requires large capital, but large capital is usually conservative. That creates a “kill zone” where a technology can be promising but not bankable.
 
-![](images/image32.png)
-
 ![](images/image33.png)
 
-300mm-\>450mm wafer was $1-5B, effort abandoned
+![](images/image34.png)
+
+300mm-\>450mm wafer effort cost was $1-5B, abandoned
 
 
 ---
@@ -326,14 +327,16 @@ Large ambition requires large capital, but large capital is usually conservative
 
 Cheap things.
 
-This year \-- Learning algorithm development.
+This year: Learning algorithm development.
 
 Implement 55 Hinton papers: 1.2B tokens ([visual\_tour](https://github.com/cybertronai/hinton-problems/))  
-![](images/image34.png)
+![](images/image35.png)
 
 Implement 58 Schmidhuber papers: 1.5B tokens [visual\_tour](https://github.com/cybertronai/schmidhuber-problems/blob/main/VISUAL_TOUR.md)
 
-![](images/image35.png)
+![](images/image36.png)
+
+Kernel Sage, TenX Semi, Verkor, ChipStack, Architect Labs, Ricursive Intelligence, Tattvam
 
 
 ---
@@ -360,13 +363,13 @@ Less splits \= more freedom\!
 #### Mega-kernels
 
 framework/kernel wall split  
-![](images/image36.png)
+![](images/image37.png)
 
 ### Hardware-specific algorithms
 
 math/compiler wall split
 
-![](images/image37.png)
+![](images/image38.png)
 
 Old world \= slow feedback.
 
@@ -375,15 +378,15 @@ But most researchers don't know that.
 
 "The general inefficiency of batch training for gradient descent learning"  
 2003 paper \-- minibatching is always worse  
-![](images/image38.png)  
+![](images/image39.png)  
 2006 \-- "A Fast Learning Algorithm for Deep Belief Nets" [https://www.cs.toronto.edu/\~fritz/absps/ncfast.pdf](https://www.cs.toronto.edu/~fritz/absps/ncfast.pdf)  
-![](images/image39.png)
-
 ![](images/image40.png)
+
+![](images/image41.png)
 
 ### Novel learning algorithms
 
-![](images/image41.png)
+![](images/image42.png)
 
 Backprop compute-to-commute ratio is designed for pre-memory-wall era.
 

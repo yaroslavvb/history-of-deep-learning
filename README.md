@@ -6,7 +6,7 @@
 
 Training conditional random fields via gradient tree boosting, Tom Dietterich  
 [https://dl.acm.org/doi/abs/10.1145/1015330.1015428](https://dl.acm.org/doi/abs/10.1145/1015330.1015428)  
-![][image1]
+![](images/image1.png)
 
 ## 2013
 
@@ -19,16 +19,16 @@ Training conditional random fields via gradient tree boosting, Tom Dietterich
 People really into their respective objectives \=\> suboptimization
 
 [https://dl.acm.org/doi/10.1109/ICDAR.2013.219](https://dl.acm.org/doi/10.1109/ICDAR.2013.219)  
-![][image2]
+![](images/image2.png)
 
 Tesseract OCR engine
 
-![][image3]
+![](images/image3.png)
 
 Combination of braille pipelines. Worked well for books. Failed for outside text.
 
 Andrew Ng comes to Google to teach UFDLD class  
-![][image4]
+![](images/image4.png)
 
 ### First DL deployment at Google
 
@@ -37,12 +37,12 @@ Initial reaction skeptical
 
 ### 2013 StreetView House Numbers
 
-![][image5]
+![](images/image5.png)
 
 StreetView House Numbers with Ian Goodfellow  
 [https://arxiv.org/abs/1312.6082](https://arxiv.org/abs/1312.6082)
 
-![][image6]
+![](images/image6.png)
 
 (hired Ian Goodfellow as an intern through this blogpost)  
 [https://yaroslavvb.blogspot.com/2013/12/deep-learning-internship-at-google.html](https://yaroslavvb.blogspot.com/2013/12/deep-learning-internship-at-google.html)
@@ -57,9 +57,9 @@ Gradient checkpointing with Tim Salimans
 [https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)  
 [https://medium.com/tensorflow/fitting-larger-networks-into-memory-583e3c758ff9](https://medium.com/tensorflow/fitting-larger-networks-into-memory-583e3c758ff9)
 
-![][image7]
+![](images/image7.png)
 
-![][image8]
+![](images/image8.png)
 
 **Lesson: backprop sucks when memory is expensive**
 
@@ -70,12 +70,12 @@ Gradient checkpointing with Tim Salimans
 Joined forces with a couple of talented juniors and beat Google at "who can train ImageNet to 75% the fastest, with no limit on compute used".   
 With a bright mobile engineer from fast.ai, Andrew Shaw
 
-![][image9]
+![](images/image9.png)
 
-![][image10]  
-[https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/](https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/)  
-[https://github.com/cybertronai/imagenet18](https://github.com/cybertronai/imagenet18)  
-[https://dawn.cs.stanford.edu/dawnbench](https://dawn.cs.stanford.edu/dawnbench)
+![](images/image10.png)  
+\- [https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/](https://www.technologyreview.com/2018/08/10/141098/small-team-of-ai-coders-beats-googles-code/)  
+\- [https://github.com/cybertronai/imagenet18](https://github.com/cybertronai/imagenet18)  
+\- [https://dawn.cs.stanford.edu/dawnbench](https://dawn.cs.stanford.edu/dawnbench)
 
 Cited as an "unnamed collaborator working for US military"
 
@@ -85,8 +85,7 @@ Cited as an "unnamed collaborator working for US military"
 
 ### Transformer-XL with Benn Mann
 
-Running training experiment with Ben Mann  
-![][image11]  
+![](images/image11.png)  
 [https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d](https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d)
 
 Led to first LLM code completion system in JetBrains
@@ -100,7 +99,7 @@ Led to first LLM code completion system in JetBrains
 PoC for Symbolic Differentiation engine at PyTorch team [https://colab.research.google.com/drive/1BDFc9poKybcxeu\_RpGGL7\_HjqlLjuqfq](https://colab.research.google.com/drive/1BDFc9poKybcxeu_RpGGL7_HjqlLjuqfq)  
 [https://community.wolfram.com/groups/-/m/t/2437093](https://community.wolfram.com/groups/-/m/t/2437093)
 
-![][image12]
+![](images/image12.png)
 
 **Lesson: not enough to give a give users a nice library, need to also do the migration**
 
@@ -111,10 +110,10 @@ PoC for Symbolic Differentiation engine at PyTorch team [https://colab.research.
 ### Scaling Laws from Free Probability
 
 Scaling Laws with Chris De Sa, Thomas Ahle, Chris Re. [preprint](https://drive.google.com/file/d/1nHWhd7tVTQh15l5iYlU1AQFgfEB-Ym6_/view)  
-![][image13]
+![](images/image13.png)
 
 Impractical Research [talk](https://www.youtube.com/watch?v=5CUTOOz-pYY&t=14s)  
-![][image14]
+![](images/image14.png)
 
 **Lesson: research as a whole is useful, the value of any individual paper is marginal (still fun though)**
 
@@ -125,15 +124,15 @@ Sutro group: solve AI using AI
 [SutroYaro](https://github.com/cybertronai/SutroYaro)  
 	\- Hinton Problems [repo](https://github.com/cybertronai/hinton-problems/)  
 	\- Schmidthuber Problems [repo](https://github.com/cybertronai/schmidhuber-problems)  
-![][image15]  
+![](images/image15.png)  
 	  
 [SutroAna](https://github.com/cybertronai/SutroAna)  
 	\- [matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
-	![][image16]  
+	![](images/image16.png)  
 	  
 	\- [sparse parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
 	  
-![][image17]  
+![](images/image17.png)  
 \- [wikitext](https://github.com/cybertronai/wikitext)
 
 **Lesson: agents can one-shot swathes of research now**
@@ -142,17 +141,15 @@ Sutro group: solve AI using AI
 
 What is path dependency? 
 
-1\. make a good design decision  
+1\. make a **good** design decision  
 2\. the environment changes  
-3\. decision is now bad
+3\. decision is now **bad**
 
-![][image18]
+![](images/image18.png)
 
-![][image19]
+![](images/image19.png)
 
-## Horses
-
-![][image20]
+![](images/image20.png)
 
 ## Nuclear Reactors
 
@@ -162,11 +159,13 @@ What is path dependency?
 
 ## Laryngeal nerves
 
-![][image21]
+![](images/image21.png)
 
-![][image22]
+![](images/image22.png)
 
-Old embryonic morphogenesis program, new anatomic dimensions, program hard to change.
+Old embryonic morphogenesis program  
+New anatomic dimensions  
+Embryonic morphogenesis program **now obsolete** (but to change)
 
 # Path dependencies in Deep Learning
 
@@ -189,21 +188,26 @@ What is path dependency?
 
 ### Hardware drift
 
-1\. memory wall  
-![][image23]![][image24]
+#### The Memory wall
 
-2\. The end of Dennard scaling  
-![][image25]
+![](images/image23.png)![](images/image24.png)  
+Arithmetic is now essentially free
+
+![](images/image25.png)
+
+#### The end of Dennard scaling
+
+![](images/image26.png)
 
 Compilers are trying to make things work, yet abstractions leak. Some algorithms are impossible to parallelize (hence minibatching)
 
-![][image26]
+![](images/image27.png)
 
 3\. Too many components to be reliable  
 [https://arxiv.org/pdf/2407.21783](https://arxiv.org/pdf/2407.21783)
 
 The Llama 3 Herd of Models  
-![][image27]
+![](images/image28.png)
 
 ### Applications drift
 
@@ -212,12 +216,12 @@ Original Deep learning didn't have an application, so the aims were broad.
 #### Rosenblatt, (eventual) space exploration
 
 1958, The New York Times  
-![][image28]
+![](images/image29.png)
 
 #### Andrew Ng, helicopter control
 
 https://cs.stanford.edu/groups/helicopter/papers/iser04-invertedflight.pdf  
-![][image29]
+![](images/image30.png)
 
 Lack of deep learning "product market fit" means we focused on components reusable across domains  
 	\- blackbox optimizer  
@@ -230,14 +234,14 @@ Lack of deep learning "product market fit" means we focused on components reusab
 	Black box optimizers (designed for shifting demands)  
 	Hit a dead-end.
 
-# ![][image30]
+# ![](images/image31.png)
 
 ### Backprop
 
 	Targetting low compute/commute ratio  
 	[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
-![][image31]
+![](images/image32.png)
 
 ### Synchronous training
 
@@ -262,24 +266,26 @@ Expensive things.
 
 Large ambition requires large capital, but large capital is usually conservative. That creates a “kill zone” where a technology can be promising but not bankable.
 
-![][image32]
+![](images/image33.png)
 
-![][image33]
+![](images/image34.png)
 
-300mm-\>450mm wafer was $1-5B, effort abandoned
+300mm-\>450mm wafer effort cost was $1-5B, abandoned
 
 # Things which easy to change
 
 Cheap things.
 
-This year \-- Learning algorithm development.
+This year: Learning algorithm development.
 
 Implement 55 Hinton papers: 1.2B tokens ([visual\_tour](https://github.com/cybertronai/hinton-problems/))  
-![][image34]
+![](images/image35.png)
 
 Implement 58 Schmidhuber papers: 1.5B tokens [visual\_tour](https://github.com/cybertronai/schmidhuber-problems/blob/main/VISUAL_TOUR.md)
 
-![][image35]
+![](images/image36.png)
+
+Kernel Sage, TenX Semi, Verkor, ChipStack, Architect Labs, Ricursive Intelligence, Tattvam
 
 # The future
 
@@ -300,13 +306,13 @@ Less splits \= more freedom\!
 #### Mega-kernels
 
 framework/kernel wall split  
-![][image36]
+![](images/image37.png)
 
 ### Hardware-specific algorithms
 
 math/compiler wall split
 
-![][image37]
+![](images/image38.png)
 
 Old world \= slow feedback.
 
@@ -315,58 +321,16 @@ But most researchers don't know that.
 
 "The general inefficiency of batch training for gradient descent learning"  
 2003 paper \-- minibatching is always worse  
-![][image38]  
+![](images/image39.png)  
 2006 \-- "A Fast Learning Algorithm for Deep Belief Nets" [https://www.cs.toronto.edu/\~fritz/absps/ncfast.pdf](https://www.cs.toronto.edu/~fritz/absps/ncfast.pdf)  
-![][image39]
+![](images/image40.png)
 
-![][image40]
+![](images/image41.png)
 
 ### Novel learning algorithms
 
-![][image41]
+![](images/image42.png)
 
 Backprop compute-to-commute ratio is designed for pre-memory-wall era.
 
 ### Architecture/optimizer co-design
-
-[image1]: images/image1.png
-[image2]: images/image2.png
-[image3]: images/image3.png
-[image4]: images/image4.png
-[image5]: images/image5.png
-[image6]: images/image6.png
-[image7]: images/image7.png
-[image8]: images/image8.png
-[image9]: images/image9.png
-[image10]: images/image10.png
-[image11]: images/image11.png
-[image12]: images/image12.png
-[image13]: images/image13.png
-[image14]: images/image14.png
-[image15]: images/image15.png
-[image16]: images/image16.png
-[image17]: images/image17.png
-[image18]: images/image18.png
-[image19]: images/image19.png
-[image20]: images/image20.png
-[image21]: images/image21.png
-[image22]: images/image22.png
-[image23]: images/image23.png
-[image24]: images/image24.png
-[image25]: images/image25.png
-[image26]: images/image26.png
-[image27]: images/image27.png
-[image28]: images/image28.png
-[image29]: images/image29.png
-[image30]: images/image30.png
-[image31]: images/image31.png
-[image32]: images/image32.png
-[image33]: images/image33.png
-[image34]: images/image34.png
-[image35]: images/image35.png
-[image36]: images/image36.png
-[image37]: images/image37.png
-[image38]: images/image38.png
-[image39]: images/image39.png
-[image40]: images/image40.png
-[image41]: images/image41.png
