@@ -25,7 +25,7 @@ Tesseract OCR engine
 
 ![](images/image3.png)
 
-Combination of braille pipelines. Worked well for books. Failed for outside text.
+Combination of brittle pipelines. Worked well for books. Failed for outside text.
 
 Andrew Ng comes to Google to teach UFDLD class  
 ![](images/image4.png)
@@ -139,6 +139,8 @@ What is path dependency?
 2\. the environment changes  
 3\. decision is now **bad**
 
+## Puzzle
+
 ![](images/image18.png)
 
 ![](images/image19.png)
@@ -159,7 +161,7 @@ What is path dependency?
 
 Old embryonic morphogenesis program  
 New anatomic dimensions  
-Embryonic morphogenesis program **now obsolete** (but to change)
+Embryonic morphogenesis program **now obsolete** (but hard to change)
 
 # Path dependencies in Deep Learning
 
@@ -214,12 +216,12 @@ Original Deep learning didn't have an application, so the aims were broad.
 
 #### Andrew Ng, helicopter control
 
-https://cs.stanford.edu/groups/helicopter/papers/iser04-invertedflight.pdf  
 ![](images/image30.png)
 
 Lack of deep learning "product market fit" means we focused on components reusable across domains  
-\- blackbox optimizer  
-\- generic loss functions
+\- blackbox optimizers  
+\- generic loss functions  
+\- reusable components (ReLU)
 
 ## Design decision
 
@@ -241,7 +243,9 @@ Targetting low compute/commute ratio
 
 Good for reliable set of compoments
 
-When I trained the first production models for Google StreetView ([paper](https://arxiv.org/abs/1312.6082)), the results were good enough to switch the entire division from classical computer-vision methods to neural networks. These models were trained asynchronously.
+#### 	Story of async/sync switch at Google
+
+\- When I trained the first production models for Google StreetView ([paper](https://arxiv.org/abs/1312.6082)), the results were good enough to switch the entire division from classical computer-vision methods to neural networks. These models were trained asynchronously.
 
 Later, working at Google Brain, I observed the switch from async to synchronous training. Anecdotally it happened as follows:  
 \- Shubho Sengupta got it working in Baidu  
@@ -249,8 +253,8 @@ Later, working at Google Brain, I observed the switch from async to synchronous 
 \- Jeff Dean told Google Brain folks to try it.
 
 Ultimately reasons for the switch were as follows:  
-1\. there was a minor improvement in accuracy on the ImageNet dataset which made publishing easier. A couple of percent improvement over state-of-the-art matter for tasks with small fixed dataset.  
-2\. sync runs were deterministic, making debugging and research easier.
+\- 1\. there was a minor improvement in accuracy on the ImageNet dataset which made publishing easier. A couple of percent improvement over state-of-the-art matter for tasks with small fixed dataset.  
+\- 2\. sync runs were deterministic, making debugging and research easier.
 
 At the time, a typical run would use less than a hundred GPUs on a cluster with an uncongested network. Weaknesses of the synchronous approach did not come to light.
 
@@ -258,7 +262,9 @@ At the time, a typical run would use less than a hundred GPUs on a cluster with
 
 Expensive things.
 
-Large ambition requires large capital, but large capital is usually conservative. That creates a “kill zone” where a technology can be promising but not bankable.
+Large ambition requires large capital, but large capital is usually conservative.  
+That creates a “kill zone”:  
+technology that is promising but not bankable.
 
 ![](images/image33.png)
 
@@ -268,7 +274,7 @@ Large ambition requires large capital, but large capital is usually conservative
 
 # Things which easy to change
 
-Cheap things.
+**Cheap** things.
 
 This year: Learning algorithm development.
 

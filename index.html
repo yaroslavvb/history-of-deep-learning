@@ -10,38 +10,54 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="theme">
 
   <style>
-    /* keep huge inline images from blowing past slide bounds */
-    .reveal .slides section img {
-      max-height: 65vh;
-      width: auto;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.12);
-      border-radius: 4px;
-    }
+    /* Headings */
     .reveal h1, .reveal h2, .reveal h3, .reveal h4 { text-transform: none; }
     .reveal h1 { font-size: 1.9em; }
     .reveal h2 { font-size: 1.5em; }
     .reveal h3 { font-size: 1.15em; color: #2563eb; }
     .reveal h4 { font-size: 1em; color: #555; }
     .reveal p, .reveal li { font-size: 0.72em; line-height: 1.45; }
-    .reveal pre code { font-size: 0.8em; }
     .reveal a { color: #2563eb; }
     .reveal .slide-number { font-size: 14px; }
-
-    /* fit-text on slides with lots of content */
     .reveal .slides section { text-align: left; }
-    .reveal .slides section.center { text-align: center; }
 
-    /* dim the print-only PDF placeholder */
-    .print-pdf .reveal .slides { transform: none !important; }
+    /* Image sizing — shrink images so the whole slide fits without scrolling.
+       Each slide is sized 1200×760 (see Reveal.initialize) with 5% margin,
+       leaving ~684px vertical. We set a per-image cap based on how many
+       images live on the same slide; the `data-image-count` attribute is
+       set by the JS at the bottom of the page once Reveal has rendered
+       all slides. */
+    .reveal .slides section img {
+      max-width: 100%;
+      max-height: 60vh;       /* fallback if data-image-count unset */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.12);
+      border-radius: 4px;
+      margin: 0 auto;
+      display: block;
+    }
+    .reveal section[data-image-count="2"] img { max-height: 34vh; }
+    .reveal section[data-image-count="3"] img { max-height: 24vh; }
+    .reveal section[data-image-count="4"] img { max-height: 19vh; }
+    .reveal section[data-image-count="5"] img { max-height: 16vh; }
+    .reveal section[data-image-count="6"] img { max-height: 14vh; }
+    .reveal section[data-image-count="7"] img,
+    .reveal section[data-image-count="8"] img,
+    .reveal section[data-image-count="9"] img,
+    .reveal section[data-image-count^="1"] img { max-height: 12vh; }
+    /* Slides that consist almost entirely of images get tighter spacing
+       so they pack vertically without overflow. */
+    .reveal section[data-image-count]:not([data-image-count="1"]) p {
+      margin: 0.2em 0;
+    }
   </style>
 </head>
 
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Loaded from slides.md so the markdown lives separately. The plugin
-           uses Reveal's default separator (lines containing `---`) to break
-           into slides; we preprocess the README to insert those breaks. -->
       <section data-markdown="slides.md" data-charset="utf-8"></section>
     </div>
   </div>
@@ -53,17 +69,30 @@
 
   <script>
     Reveal.initialize({
-      hash: true,                  // each slide gets its own URL fragment
-      slideNumber: 'c/t',          // current / total in bottom-right
+      hash: true,
+      slideNumber: 'c/t',
       controls: true,
       progress: true,
-      center: false,               // align content to top of slide
+      center: false,
       transition: 'slide',
       width: 1200,
       height: 760,
       margin: 0.05,
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
     });
+
+    // After the markdown plugin has built all <section> elements, count the
+    // images on each and write data-image-count so CSS can pick the right
+    // max-height cap. Runs after every slide change so dynamically loaded
+    // slides also get tagged.
+    function tagImageCounts() {
+      document.querySelectorAll('.reveal .slides section').forEach(s => {
+        const n = s.querySelectorAll('img').length;
+        if (n > 0) s.setAttribute('data-image-count', n);
+      });
+    }
+    Reveal.on('ready', tagImageCounts);
+    Reveal.on('slidetransitionend', tagImageCounts);
   </script>
 </body>
 </html>
