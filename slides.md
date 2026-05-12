@@ -1,20 +1,19 @@
-# Personal History of Deep Learning
+# What comes after Deep Learning?
 
 
 ---
 
-## 2004
+## Personal History of Deep Learning
 
-### Conditional Random Fields
+### 2004
+
+#### Conditional Random Fields
 
 Training conditional random fields via gradient tree boosting, Tom Dietterich  
 [https://dl.acm.org/doi/abs/10.1145/1015330.1015428](https://dl.acm.org/doi/abs/10.1145/1015330.1015428)  
 ![](images/image1.png)
 
-
----
-
-## 2013
+### 2013
 
 **OCR pipeline at Google** — rigid hand-built system split across multiple stages, each tuned by different experts. Used as the "before" picture of a bounded, partitioned design.
 
@@ -36,16 +35,15 @@ Combination of braille pipelines. Worked well for books. Failed for outside text
 Andrew Ng comes to Google to teach UFDLD class  
 ![](images/image4.png)
 
-### First DL deployment at Google
+#### 2013 StreetView House Numbers
+
+First DL deployment at Google
 
 Initial reaction skeptical  
 	(we tried deep learning in the 80s, try SIFT)
 
-### 2013 StreetView House Numbers
-
 ![](images/image5.png)
 
-StreetView House Numbers with Ian Goodfellow  
 [https://arxiv.org/abs/1312.6082](https://arxiv.org/abs/1312.6082)
 
 ![](images/image6.png)
@@ -98,9 +96,12 @@ Cited as an "unnamed collaborator working for US military"
 
 ## 2019
 
-### Transformer-XL with Benn Mann
+### Transformer-XL
 
-![](images/image11.png)  
+GPT-2 reproduction
+
+### ![](images/image11.png)
+
 [https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d](https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d)
 
 Led to first LLM code completion system in JetBrains
@@ -391,3 +392,10 @@ But most researchers don't know that.
 Backprop compute-to-commute ratio is designed for pre-memory-wall era.
 
 ### Architecture/optimizer co-design
+
+Scientific computing literature customizes equation solvers to the structure of the problem.  
+	\- multigrid methods  
+	\- fast multipole  
+	\- etc.
+
+Deep Learning uses the same optimizer for convolutional networks as for transformers.
