@@ -180,11 +180,21 @@ What is path dependency?
 
 ## Puzzle
 
-![](images/image18.png)
+![](images/image18.png)  
 
-![](images/image19.png)
+---
+
+
+![](images/image19.png)  
+
+---
+
 
 ![](images/image20.png)
+
+
+---
+
 
 
 ---
@@ -198,9 +208,17 @@ What is path dependency?
 
 ---
 
+
+
+---
+
 ## Laryngeal nerves
 
 ![](images/image21.png)
+
+
+---
+
 
 ![](images/image22.png)
 
@@ -243,7 +261,10 @@ What is path dependency?
 ![](images/image23.png)![](images/image24.png)  
 Arithmetic is now essentially free
 
-![](images/image25.png)
+![](images/image25.png)  
+
+---
+
 
 #### The end of Dennard scaling
 
@@ -251,9 +272,13 @@ Arithmetic is now essentially free
 
 Compilers are trying to make things work, yet abstractions leak. Some algorithms are impossible to parallelize (hence minibatching)
 
-![](images/image27.png)
+![](images/image27.png)  
 
-3\. Too many components to be reliable  
+---
+
+
+#### Unreliable components
+
 [https://arxiv.org/pdf/2407.21783](https://arxiv.org/pdf/2407.21783)
 
 The Llama 3 Herd of Models  
@@ -269,7 +294,10 @@ Original Deep learning didn't have an application, so the aims were broad.
 #### Rosenblatt, (eventual) space exploration
 
 1958, The New York Times  
-![](images/image29.png)
+![](images/image29.png)  
+
+---
+
 
 #### Andrew Ng, helicopter control
 
@@ -283,7 +311,9 @@ Lack of deep learning "product market fit" means we focused on components reusab
 
 ---
 
-## Design decision
+## Design decisions
+
+What design decisions were made in the old environment?
 
 
 ---
@@ -301,12 +331,18 @@ Hit a dead-end.
 
 ---
 
+
+
+---
+
 ### Backprop
 
-Targetting low compute/commute ratio  
-[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
+Targetting low compute/commute ratio
 
-![](images/image32.png)
+![](images/image32.png)  
+
+---
+
 
 
 ---
@@ -317,18 +353,16 @@ Good for reliable set of compoments
 
 #### 	Story of async/sync switch at Google
 
-\- When I trained the first production models for Google StreetView ([paper](https://arxiv.org/abs/1312.6082)), the results were good enough to switch the entire division from classical computer-vision methods to neural networks. These models were trained asynchronously.
+\- Original models trained async. Then switched to sync shortly after GPU training.
 
-Later, working at Google Brain, I observed the switch from async to synchronous training. Anecdotally it happened as follows:  
+Anecdotally it happened as follows:  
 \- Shubho Sengupta got it working in Baidu  
 \- Andrew Ng told Jeff Dean  
 \- Jeff Dean told Google Brain folks to try it.
 
 Ultimately reasons for the switch were as follows:  
-\- 1\. there was a minor improvement in accuracy on the ImageNet dataset which made publishing easier. A couple of percent improvement over state-of-the-art matter for tasks with small fixed dataset.  
-\- 2\. sync runs were deterministic, making debugging and research easier.
-
-At the time, a typical run would use less than a hundred GPUs on a cluster with an uncongested network. Weaknesses of the synchronous approach did not come to light.
+\- 1.minor improvement in accuracy on the ImageNet  
+\- 2\. sync runs were deterministic, making debugging
 
 
 ---
@@ -337,15 +371,17 @@ At the time, a typical run would use less than a hundred GPUs on a cluster with
 
 Expensive things.
 
-Large ambition requires large capital, but large capital is usually conservative.  
-That creates a “kill zone”:  
+\- Large ambition requires large capital  
+\- Large capital is conservative.  
+\- Hence “kill zone”:  
 technology that is promising but not bankable.
 
 ![](images/image33.png)
 
+Examples   
 ![](images/image34.png)
 
-300mm-\>450mm wafer effort cost was $1-5B, abandoned
+45 AI hardware startups. How many survived?
 
 
 ---
@@ -358,6 +394,9 @@ This year: Learning algorithm development.
 
 Implement 55 Hinton papers: 1.2B tokens ([visual\_tour](https://github.com/cybertronai/hinton-problems/))  
 ![](images/image35.png)
+
+
+---
 
 Implement 58 Schmidhuber papers: 1.5B tokens [visual\_tour](https://github.com/cybertronai/schmidhuber-problems/blob/main/VISUAL_TOUR.md)
 
@@ -379,16 +418,18 @@ to existing hardware (**hard to change**)
 
 ## Potential Examples
 
+Which things become possible with AI agents?
+
 
 ---
 
 ### Fewer abstraction splits
 
 Why do we have abstractions?  
-n^2 communication bottleneck.  
+n² communication bottleneck.  
 If a task requires more than x people, better to split.  
-Less people \= less splits.  
-Less splits \= more freedom\!
+Capable people \= Less people needed \= less splits.  
+Less splits \= more freedom to improve things\!
 
 #### Mega-kernels
 
@@ -406,14 +447,22 @@ math/compiler wall split
 
 Old world \= slow feedback.
 
-Mini-batching is motivated by the memory wall.  
-But most researchers don't know that.
+Mini-batching motivated by the memory wall.  
+(most researchers don't know that)
 
-"The general inefficiency of batch training for gradient descent learning"  
-2003 paper \-- minibatching is always worse  
+2003 \- "The general inefficiency of batch training for gradient descent learning"
+
 ![](images/image39.png)  
+
+---
+
+
 2006 \-- "A Fast Learning Algorithm for Deep Belief Nets" [https://www.cs.toronto.edu/\~fritz/absps/ncfast.pdf](https://www.cs.toronto.edu/~fritz/absps/ncfast.pdf)  
-![](images/image40.png)
+![](images/image40.png)  
+
+---
+
+Explosion of DSLs this year
 
 ![](images/image41.png)
 
@@ -424,8 +473,8 @@ But most researchers don't know that.
 
 ![](images/image42.png)
 
-Backprop compute-to-commute ratio is designed for pre-memory-wall era.  
-What is the new minimizer (intelligence-per-Joule)
+Backprop compute-to-commute ratio suits for pre-memory-wall era.  
+What is natural for the post-memory-wall era?
 
 
 ---
@@ -437,4 +486,9 @@ Scientific computing literature customizes equation solvers to the structure of 
 \- fast multipole  
 \- etc.
 
-Deep Learning uses the same optimizer for convolutional networks as for transformers.
+Deep Learning uses the same optimizer for convolutional networks as for Transformers.
+
+
+---
+
+## Questions
