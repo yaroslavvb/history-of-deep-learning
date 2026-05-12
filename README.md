@@ -6,7 +6,8 @@
 
 Training conditional random fields via gradient tree boosting, Tom Dietterich  
 [https://dl.acm.org/doi/abs/10.1145/1015330.1015428](https://dl.acm.org/doi/abs/10.1145/1015330.1015428)  
-![](images/image1.png)
+![](images/image1.png)  
+2005 Cycle-corrected Belief Propagation [pdf](http://www.yaroslavvb.com/papers/bulatov-cycle.pdf)
 
 ### 2013 Google, OCR
 
@@ -25,10 +26,11 @@ Tesseract OCR engine
 
 ![](images/image3.png)
 
-Combination of brittle pipelines. Worked well for books. Failed for outside text.
+Combination of brittle pipelines. Worked well for books after 20 years of tweaking. Failed for outside text.
 
 Andrew Ng comes to Google to teach UFDLD class  
-![](images/image4.png)
+![](images/image4.png)  
+\- 1st time implementing backprop by hand
 
 StreetView House Numbers
 
@@ -48,15 +50,26 @@ Initial reaction skeptical
 
 **Lesson: removing walls of abstraction opens up new directions**
 
+### 2015 Google Brain Team
+
+DistBelief \-\> Tensorflow
+
+tensorflow::ops::DiagPart
+
+How backprop was implemented originally  
+\- Lua Port  
+\- Rajat  
+\- 2nd-5th time implementing backprop by hand
+
 ### 2018  OpenAI, gradient checkpointing
 
 Gradient checkpointing with Tim Salimans  
-[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)  
-[https://medium.com/tensorflow/fitting-larger-networks-into-memory-583e3c758ff9](https://medium.com/tensorflow/fitting-larger-networks-into-memory-583e3c758ff9)
+[cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
 ![](images/image7.png)
 
-![](images/image8.png)
+![](images/image8.png)  
+\- 6nd-7th time implementing backprop by hand
 
 **Lesson: backprop sucks when memory is expensive**
 
@@ -82,27 +95,20 @@ GPT-2 reproduction
 
 ### ![](images/image11.png)
 
-[https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d](https://yaroslavvb.medium.com/scaling-transformer-xl-to-128-gpus-d21875961c5d)
+Led to first LLM code completion system in JetBrains.
 
-Led to first LLM code completion system in JetBrains
+### 2023 PyTorch Distributed team
 
-**Lesson: being too early is as bad as being too late. (also [near.ml](http://near.ml), tab9)**
+Symbolic Differentiation engine, NCCL migration
 
-### 2023 Symbolic Differentiation in PyTorch
+![](images/image12.png)  
+[colab](https://colab.research.google.com/drive/1BDFc9poKybcxeu_RpGGL7_HjqlLjuqfq), wolfram community [post](https://community.wolfram.com/groups/-/m/t/2437093)
 
-PoC for Symbolic Differentiation engine at PyTorch team [https://colab.research.google.com/drive/1BDFc9poKybcxeu\_RpGGL7\_HjqlLjuqfq](https://colab.research.google.com/drive/1BDFc9poKybcxeu_RpGGL7_HjqlLjuqfq)  
-[https://community.wolfram.com/groups/-/m/t/2437093](https://community.wolfram.com/groups/-/m/t/2437093)
-
-![](images/image12.png)
-
-**Lesson: not enough to give a give users a nice library, need to also do the migration**
+\- 7th-10th time implementing backprop by hand
 
 ### 2025 Scaling Laws from Free Probability
 
-[Together.AI](http://Together.AI) 
-
-### 
-
+[Together.AI](http://Together.AI)   
 Scaling Laws with Chris De Sa, Thomas Ahle, Chris Re. [preprint](https://drive.google.com/file/d/1nHWhd7tVTQh15l5iYlU1AQFgfEB-Ym6_/view)  
 ![](images/image13.png)
 
@@ -116,18 +122,18 @@ Impractical Research [talk](https://www.youtube.com/watch?v=5CUTOOz-pYY&t=14s)
 Sutro group: solve AI using AI
 
 [SutroYaro](https://github.com/cybertronai/SutroYaro)  
-\- Hinton Problems [repo](https://github.com/cybertronai/hinton-problems/)  
-\- Schmidthuber Problems [repo](https://github.com/cybertronai/schmidhuber-problems)  
+Hinton Problems [repo](https://github.com/cybertronai/hinton-problems/)  
+Schmidthuber Problems [repo](https://github.com/cybertronai/schmidhuber-problems)  
 ![](images/image15.png)  
   
 [SutroAna](https://github.com/cybertronai/SutroAna)  
-\- [matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
+[matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
 ![](images/image16.png)  
   
-\- [sparse parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
+[sparse parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
   
 ![](images/image17.png)  
-\- [wikitext](https://github.com/cybertronai/wikitext)
+[wikitext](https://github.com/cybertronai/wikitext)
 
 **Lesson: agents can one-shot swathes of research now**
 
@@ -283,10 +289,13 @@ technology that is promising but not bankable.
 
 ![](images/image33.png)
 
-Examples   
+## 2018 Cade Metz article
+
 ![](images/image34.png)
 
-45 AI hardware startups. How many survived?
+45 AI hardware startups.
+
+## 300-\>450 wafer upgrade story
 
 # Things which easy to change
 
@@ -366,4 +375,4 @@ Scientific computing literature customizes equation solvers to the structure of 
 
 Deep Learning uses the same optimizer for convolutional networks as for Transformers.
 
-## Questions
+## Plan
