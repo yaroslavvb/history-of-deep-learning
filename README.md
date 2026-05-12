@@ -2,15 +2,13 @@
 
 ## Personal History of Deep Learning
 
-### 2004
-
-#### Conditional Random Fields
+### 2004 Conditional Random Fields
 
 Training conditional random fields via gradient tree boosting, Tom Dietterich  
 [https://dl.acm.org/doi/abs/10.1145/1015330.1015428](https://dl.acm.org/doi/abs/10.1145/1015330.1015428)  
 ![](images/image1.png)
 
-### 2013
+### 2013 Google, OCR
 
 **OCR pipeline at Google** — rigid hand-built system split across multiple stages, each tuned by different experts. Used as the "before" picture of a bounded, partitioned design.
 
@@ -18,9 +16,9 @@ Training conditional random fields via gradient tree boosting, Tom Dietterich
 \- Segmentation  
 \- Classification
 
-People really into their respective objectives \=\> suboptimization
+People really leaned into their respective objectives:  
+suboptimization
 
-[https://dl.acm.org/doi/10.1109/ICDAR.2013.219](https://dl.acm.org/doi/10.1109/ICDAR.2013.219)  
 ![](images/image2.png)
 
 Tesseract OCR engine
@@ -32,12 +30,12 @@ Combination of braille pipelines. Worked well for books. Failed for outside text
 Andrew Ng comes to Google to teach UFDLD class  
 ![](images/image4.png)
 
-#### 2013 StreetView House Numbers
+StreetView House Numbers
 
 First DL deployment at Google
 
 Initial reaction skeptical  
-	(we tried deep learning in the 80s, try SIFT)
+(we tried deep learning in the 80s, try SIFT)
 
 ![](images/image5.png)
 
@@ -50,9 +48,7 @@ Initial reaction skeptical
 
 **Lesson: removing walls of abstraction opens up new directions**
 
-## 2018 
-
-### OpenAI, gradient checkpointing
+### 2018  OpenAI, gradient checkpointing
 
 Gradient checkpointing with Tim Salimans  
 [https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)  
@@ -64,9 +60,7 @@ Gradient checkpointing with Tim Salimans
 
 **Lesson: backprop sucks when memory is expensive**
 
-## 2018
-
-### DAWN Imagenet competition
+### 2018 DAWN Imagenet competition
 
 Joined forces with a couple of talented juniors and beat Google at "who can train ImageNet to 75% the fastest, with no limit on compute used".   
 With a bright mobile engineer from fast.ai, Andrew Shaw
@@ -82,9 +76,7 @@ Cited as an "unnamed collaborator working for US military"
 
 **Lesson: fast iteration \>\> thinking about beautiful ideas for a while**
 
-## 2019
-
-### Transformer-XL
+### 2019 Transformer-XL
 
 GPT-2 reproduction
 
@@ -96,9 +88,7 @@ Led to first LLM code completion system in JetBrains
 
 **Lesson: being too early is as bad as being too late. (also [near.ml](http://near.ml), tab9)**
 
-## 2023
-
-### Symbolic Differentiation in PyTorch
+### 2023 Symbolic Differentiation in PyTorch
 
 PoC for Symbolic Differentiation engine at PyTorch team [https://colab.research.google.com/drive/1BDFc9poKybcxeu\_RpGGL7\_HjqlLjuqfq](https://colab.research.google.com/drive/1BDFc9poKybcxeu_RpGGL7_HjqlLjuqfq)  
 [https://community.wolfram.com/groups/-/m/t/2437093](https://community.wolfram.com/groups/-/m/t/2437093)
@@ -107,11 +97,11 @@ PoC for Symbolic Differentiation engine at PyTorch team [https://colab.research.
 
 **Lesson: not enough to give a give users a nice library, need to also do the migration**
 
-## 2025
+### 2025 Scaling Laws from Free Probability
 
 [Together.AI](http://Together.AI) 
 
-### Scaling Laws from Free Probability
+### 
 
 Scaling Laws with Chris De Sa, Thomas Ahle, Chris Re. [preprint](https://drive.google.com/file/d/1nHWhd7tVTQh15l5iYlU1AQFgfEB-Ym6_/view)  
 ![](images/image13.png)
@@ -121,21 +111,21 @@ Impractical Research [talk](https://www.youtube.com/watch?v=5CUTOOz-pYY&t=14s)
 
 **Lesson: research as a whole is useful, the value of any individual paper is marginal (still fun though)**
 
-## 2026
+### 2026 Sutro Group
 
 Sutro group: solve AI using AI
 
 [SutroYaro](https://github.com/cybertronai/SutroYaro)  
-	\- Hinton Problems [repo](https://github.com/cybertronai/hinton-problems/)  
-	\- Schmidthuber Problems [repo](https://github.com/cybertronai/schmidhuber-problems)  
+\- Hinton Problems [repo](https://github.com/cybertronai/hinton-problems/)  
+\- Schmidthuber Problems [repo](https://github.com/cybertronai/schmidhuber-problems)  
 ![](images/image15.png)  
-	  
+  
 [SutroAna](https://github.com/cybertronai/SutroAna)  
-	\- [matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
-	![](images/image16.png)  
-	  
-	\- [sparse parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
-	  
+\- [matmul](https://github.com/cybertronai/sutro-problems/tree/main/matmul)  
+![](images/image16.png)  
+  
+\- [sparse parity](https://github.com/cybertronai/sutro-problems/tree/main/sparse-parity)  
+  
 ![](images/image17.png)  
 \- [wikitext](https://github.com/cybertronai/wikitext)
 
@@ -159,7 +149,7 @@ What is path dependency?
 
 * **Nuclear Power: The "Submarine" Trap**  
   * **The Lock-in:** Light Water Reactors (LWR) are the standard for nuclear power, but they are not the safest or most efficient design. They became the standard because **Admiral Rickover** needed a compact reactor for *submarines*.  
-  * **The Failure:** The civilian industry just copied the submarine supply chain. We spent 50 years optimizing a "submarine engine" for cities, ignoring better designs (like Molten Salt Reactors) because the supply chain (the "interface") already existed.
+  * **The Failure:** The civilian industry just copied the submarine supply chain. We spent 50 years optimizing a "submarine engine" for cities, ignoring better designs (like Molten Salt Reactors) because the supply chain already existed.
 
 ## Laryngeal nerves
 
@@ -180,9 +170,9 @@ What is path dependency?
 3\. decision is now bad
 
 \- Design decisions made in the old era  
-	\- generic components: losses, optimizers, activations  
-	\- sequential dependencies: layers, gradient descent.  
-	\- low compute-to-commute ratio: backprop
+\- generic components: losses, optimizers, activations  
+\- sequential dependencies: layers, gradient descent.  
+\- low compute-to-commute ratio: backprop
 
 \- The environment changed  
 \- A. shifting hardware  
@@ -228,30 +218,30 @@ https://cs.stanford.edu/groups/helicopter/papers/iser04-invertedflight.pdf
 ![](images/image30.png)
 
 Lack of deep learning "product market fit" means we focused on components reusable across domains  
-	\- blackbox optimizer  
-	\- generic loss functions
+\- blackbox optimizer  
+\- generic loss functions
 
 ## Design decision
 
 ### Gradient descent
 
-	Black box optimizers (designed for shifting demands)  
-	Hit a dead-end.
+Black box optimizers (designed for shifting demands)  
+Hit a dead-end.
 
 # ![](images/image31.png)
 
 ### Backprop
 
-	Targetting low compute/commute ratio  
-	[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
+Targetting low compute/commute ratio  
+[https://github.com/cybertronai/gradient-checkpointing](https://github.com/cybertronai/gradient-checkpointing)
 
 ![](images/image32.png)
 
 ### Synchronous training
 
-	Good for reliable set of compoments
+Good for reliable set of compoments
 
-	When I trained the first production models for Google StreetView ([paper](https://arxiv.org/abs/1312.6082)), the results were good enough to switch the entire division from classical computer-vision methods to neural networks. These models were trained asynchronously.
+When I trained the first production models for Google StreetView ([paper](https://arxiv.org/abs/1312.6082)), the results were good enough to switch the entire division from classical computer-vision methods to neural networks. These models were trained asynchronously.
 
 Later, working at Google Brain, I observed the switch from async to synchronous training. Anecdotally it happened as follows:  
 \- Shubho Sengupta got it working in Baidu  
@@ -297,7 +287,7 @@ Redeveloping of algorithms (**easy to change**)
 *for a better fit*  
 to existing hardware (**hard to change**)
 
-## Examples
+## Potential Examples
 
 ### Fewer abstraction splits
 
@@ -335,13 +325,14 @@ But most researchers don't know that.
 
 ![](images/image42.png)
 
-Backprop compute-to-commute ratio is designed for pre-memory-wall era.
+Backprop compute-to-commute ratio is designed for pre-memory-wall era.  
+What is the new minimizer (intelligence-per-Joule)
 
 ### Architecture/optimizer co-design
 
 Scientific computing literature customizes equation solvers to the structure of the problem.  
-	\- multigrid methods  
-	\- fast multipole  
-	\- etc.
+\- multigrid methods  
+\- fast multipole  
+\- etc.
 
 Deep Learning uses the same optimizer for convolutional networks as for transformers.
